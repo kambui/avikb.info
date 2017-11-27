@@ -1,13 +1,11 @@
-application: avikbinfo
-version: avikbinfov1
 runtime: php55
 api_version: 1
 
 handlers:
 # Serve images as static resources.
-- url: /(.+\.(gif|png|jpg|css|js|svg|ttf))$
+- url: /(.+\.(gif|png|jpg|css|js|svg|ttf|woff))$
   static_files: \1
-  upload: .+\.(gif|png|jpg|css|js|svg|ttf)$
+  upload: .+\.(gif|png|jpg|css|js|svg|ttf|woff)$
   application_readable: true
 
 # Serve php scripts.
